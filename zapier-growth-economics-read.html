@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zapier Growth Economics Read</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --panel-soft: #f8fafc;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: #dbe3ee;
+      --accent: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+      --radius-sm: 14px;
+      --max: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.58;
+    }
+
+    body { padding: 28px 18px 56px; }
+    .wrap { display: flex; justify-content: center; }
+    .page { width: 100%; max-width: var(--max); }
+
+    .hero, .sheet, .footer {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .hero { padding: 32px 34px 26px; margin-bottom: 18px; }
+    .sheet { padding: 24px 24px 26px; margin-bottom: 18px; }
+    .footer { padding: 18px 22px; margin-top: 18px; }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-copy,
+    .section-copy,
+    .section-note,
+    .bridge,
+    .bodycopy,
+    .footer p,
+    .read-box p {
+      max-width: none;
+      font-size: 1rem;
+      text-align: justify;
+      text-justify: inter-word;
+      text-wrap: pretty;
+      hyphens: none;
+      orphans: 3;
+      widows: 3;
+    }
+
+    .hero-copy,
+    .section-copy,
+    .section-note,
+    .footer p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .section-copy,
+    .bodycopy { margin: 0 0 18px; }
+
+    .sheet-header {
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .sheet-label {
+      margin: 0;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 800;
+    }
+
+    .sheet-title {
+      margin: 4px 0 0;
+      font-size: 1.25rem;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      padding: 18px;
+    }
+
+    .hero-card { margin-top: 18px; }
+    .section-card { margin-top: 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      table-layout: fixed;
+      font-size: 0.95rem;
+      line-height: 1.48;
+    }
+
+    th, td {
+      border-top: 1px solid var(--line);
+      padding: 12px 12px;
+      text-align: left;
+      vertical-align: top;
+      overflow-wrap: normal;
+      word-break: normal;
+      hyphens: none;
+    }
+
+    thead th {
+      border-top: 0;
+      color: var(--text);
+      font-size: 0.84rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: #fbfcfe;
+    }
+
+    tbody td { color: var(--text); }
+    tbody td:nth-child(3) { color: var(--muted); }
+    tbody td:first-child {
+      font-weight: 600;
+      text-align: left;
+    }
+
+    .intro-table col:first-child { width: 23%; }
+    .intro-table col:last-child { width: 77%; }
+
+    .three-col col:nth-child(1) { width: 24%; }
+    .three-col col:nth-child(2) { width: 35%; }
+    .three-col col:nth-child(3) { width: 41%; }
+
+    .section-note {
+      margin: 12px 2px 0;
+      font-size: 0.92rem;
+    }
+
+    .bridge {
+      margin: 0 0 12px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .read-box {
+      margin-top: 16px;
+      padding: 16px 18px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid var(--accent-soft);
+      border-radius: var(--radius-sm);
+    }
+
+    .read-box h3 {
+      margin: 0 0 10px;
+      font-size: 0.98rem;
+      letter-spacing: -0.01em;
+    }
+
+    .read-box p {
+      margin: 0;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 1.52;
+    }
+
+    .bodycopy {
+      margin-top: 16px;
+      color: var(--text);
+    }
+
+    .nowrap { white-space: nowrap; }
+
+    @media (max-width: 900px) {
+      body { padding: 18px 14px 44px; }
+      .hero, .sheet { padding: 22px; }
+      .intro-table col:first-child,
+      .three-col col:nth-child(1),
+      .three-col col:nth-child(2),
+      .three-col col:nth-child(3) { width: auto; }
+      table { table-layout: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <main class="page">
+      <header class="hero">
+        <h1>Zapier Growth Economics Read</h1>
+        <p class="hero-copy">This read focuses on the public signals, the main pressure point, and the limits of what can be concluded from disclosure alone.</p>
+
+        <div class="card hero-card">
+          <table class="intro-table">
+            <colgroup><col /><col /></colgroup>
+            <thead>
+              <tr><th>Section</th><th>Content</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Main question</td>
+                <td>How should Zapier's growth be read now that usage monetization and billing mechanics are more complex than a plain task-based subscription model?</td>
+              </tr>
+              <tr>
+                <td>Pressure point</td>
+                <td>The public model now shows both multiple usage units and more explicit usage and billing governance.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section-note">* Not attempted here: this read does not infer segment margin, product-level gross margin, or internal cohort behavior that Zapier does not disclose publicly.</p>
+      </header>
+
+      <section class="sheet">
+        <div class="sheet-header">
+          <p class="sheet-label">01</p>
+          <h2 class="sheet-title">Self-serve growth is no longer a one-meter model</h2>
+        </div>
+
+        <p class="section-copy">Zapier's public pricing now combines task-based platform plans with separate AI usage units, including MCP task conversion, agent activities, and <span class="nowrap">chatbot quotas</span>. From the outside, that is a more complex revenue architecture than a plain workflow subscription.</p>
+
+        <div class="card section-card">
+          <table class="three-col">
+            <colgroup><col /><col /><col /></colgroup>
+            <thead>
+              <tr><th>Metric</th><th>Public signal</th><th>What it shows</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Core platform usage</td>
+                <td>100 to 2M tasks per month</td>
+                <td>Main platform is still priced on task volume.</td>
+              </tr>
+              <tr>
+                <td>MCP usage rule</td>
+                <td>1 successful MCP tool call = 2 tasks</td>
+                <td>AI tool use already converts into platform consumption.</td>
+              </tr>
+              <tr>
+                <td>Agents usage</td>
+                <td>1,500 activities per month on Pro</td>
+                <td>Separate AI usage unit sits alongside tasks.</td>
+              </tr>
+              <tr>
+                <td>Chatbots usage</td>
+                <td>5 chatbots, 10 knowledge sources per chatbot, 100K Table records on Pro</td>
+                <td>Separate product limits sit alongside task-based pricing.</td>
+              </tr>
+              <tr>
+                <td>Platform plan pricing</td>
+                <td>Professional: $19.99/month annual; Team: $69/month annual</td>
+                <td>Core plans and newer AI surfaces are not governed by one clean operating meter.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="read-box">
+          <h3>Read</h3>
+          <p>The harder question is whether usage across those units is additive, substitutive, or transitional as customers move across the platform. That distinction matters because the same top-line movement can mean very different things underneath: genuine expansion, migration from one surface to another, or pricing and packaging normalization across adjacent products.</p>
+        </div>
+      </section>
+
+      <section class="sheet">
+        <div class="sheet-header">
+          <p class="sheet-label">02</p>
+          <h2 class="sheet-title">Billing mechanics now matter more to the economic read</h2>
+        </div>
+
+        <p class="bridge">As adjacent AI surfaces are brought onto a more unified platform, usage measurement stops being a back-office billing detail and becomes part of the economic read.</p>
+
+        <p class="section-copy">Zapier's public billing documentation no longer stops at plan tiers. It now shows how usage is tracked, pooled, and allowed to continue beyond included limits. Customers can monitor task usage through <span class="nowrap">Usage insights</span>, newer accounts have <span class="nowrap">pay-per-task billing</span> enabled by default, and Team and Enterprise accounts can view or export <span class="nowrap">member-level usage</span> against <span class="nowrap">shared task pools</span>.</p>
+
+        <div class="card section-card">
+          <table class="three-col">
+            <colgroup><col /><col /><col /></colgroup>
+            <thead>
+              <tr><th>Mechanic</th><th>Public signal</th><th>What it shows</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Overage design</td>
+                <td>Accounts created after January 2024 have pay-per-task billing enabled by default, and usage can continue up to a cap equal to <strong>3x</strong> the selected plan's task limit.</td>
+                <td>Billing exposure is not purely tier-based. There is a defined usage band above included limits rather than a clean stop at the plan threshold.</td>
+              </tr>
+              <tr>
+                <td>Pooled-account governance</td>
+                <td>Team and Enterprise accounts use shared task pools, and admins can view or export member-level usage for the current billing cycle.</td>
+                <td>Consumption is managed at account level, not only at individual-user level, and Zapier exposes enough detail to support pooled-account governance.</td>
+              </tr>
+              <tr>
+                <td>Metered execution</td>
+                <td>Only successful actions count toward task usage, and Free, Pro, and Team plans include a Usage insights tab.</td>
+                <td>Usage is measured cleanly enough to support active monitoring, not left as a hidden billing outcome at month end.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="read-box">
+          <h3>Read</h3>
+          <p>The harder question is not just how Zapier monetizes usage, but how overage behavior, pooled consumption, and execution quality change the economic read underneath the same top-line growth story.</p>
+        </div>
+
+        <p class="bodycopy">The point is not just that usage is billed. The stronger read is that usage visibility, overage behavior, and pooled-account consumption are now explicit enough to shape how the business is interpreted from the outside. That does not prove margin pressure on its own. It does show that billing design and measurement quality now sit much closer to the operating economics than a plain plan-price view would suggest.</p>
+      </section>
+
+      <footer class="footer">
+        <p>AI-assisted for data validation, formatting, and production efficiency. Analytical judgement, signal selection, and synthesis were led by Paramesh Ayyar.</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
