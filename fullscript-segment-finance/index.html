@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Segment Finance: Driver Logic, Revenue Quality, and Cost Behavior</title>
+
   <style>
     :root {
       --bg: #f6f3ee;
@@ -17,7 +18,9 @@
       --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
     }
 
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
@@ -109,12 +112,18 @@
       line-height: 1.55;
     }
 
+    .context-box li {
+      margin-bottom: 7px;
+    }
+
     section {
       padding: 40px 52px;
       border-bottom: 1px solid var(--line);
     }
 
-    section:last-child { border-bottom: none; }
+    section:last-child {
+      border-bottom: none;
+    }
 
     .section-title {
       margin: 0 0 14px;
@@ -173,13 +182,13 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: 1fr;
       gap: 18px;
     }
 
     .driver-card {
       min-height: 100%;
-      padding: 24px;
+      padding: 26px;
       border: 1px solid var(--line);
       border-radius: 20px;
       background: #ffffff;
@@ -232,16 +241,14 @@
       color: #3d4852;
       font-size: 14.8px;
       line-height: 1.5;
+      columns: 2;
+      column-gap: 34px;
     }
 
-    .look-for li { margin-bottom: 7px; }
-
-    .experience-copy p {
-      margin: 0 0 16px;
-      font-size: 16px;
+    .look-for li {
+      margin-bottom: 7px;
+      break-inside: avoid;
     }
-
-    .experience-copy p:last-child { margin-bottom: 0; }
 
     .footer-grid {
       display: grid;
@@ -268,7 +275,9 @@
       line-height: 1.55;
     }
 
-    .foot-box p:last-child { margin-bottom: 0; }
+    .foot-box p:last-child {
+      margin-bottom: 0;
+    }
 
     .sources {
       margin-top: 20px;
@@ -283,30 +292,68 @@
     }
 
     @media (max-width: 920px) {
-      header, section { padding: 34px 28px; }
-      .opening-grid, .cards, .footer-grid { grid-template-columns: 1fr; }
-      h1 { font-size: 40px; }
+      header,
+      section {
+        padding: 34px 28px;
+      }
+
+      .opening-grid,
+      .cards,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .look-for ul {
+        columns: 1;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
     }
 
     @media print {
-      body { background: white; }
-      .page { width: 100%; margin: 0; }
-      .card { box-shadow: none; border-radius: 0; }
+      body {
+        background: white;
+      }
+
+      .page {
+        width: 100%;
+        margin: 0;
+      }
+
+      .card {
+        box-shadow: none;
+        border-radius: 0;
+      }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
     <article class="card">
       <header>
         <div class="eyebrow">Operating finance brief</div>
+
         <h1>Segment Finance: Driver Logic, Revenue Quality, and Cost Behavior</h1>
-        <p class="subtitle">A short operating-finance brief using Fullscript’s public product direction as the case context.</p>
+
+        <p class="subtitle">
+          A short operating-finance brief using Fullscript’s public product direction as the case context.
+        </p>
 
         <div class="opening-grid">
           <div class="opening-copy">
-            <p>This brief is intended to show how I think about segment finance: starting with the business model, identifying the drivers underneath reported activity, and connecting those drivers to revenue quality, cost behavior, margin contribution, and payback.</p>
-            <p>The purpose is not to estimate Fullscript’s internal economics from the outside. It is to show how I would organize the driver logic before building a segment model, scorecard, or operating review.</p>
+            <p>
+              This brief is intended to show how I think about segment finance: starting with the business model,
+              identifying the drivers underneath reported activity, and connecting those drivers to revenue quality,
+              cost behavior, margin contribution, and payback.
+            </p>
+
+            <p>
+              The purpose is not to estimate Fullscript’s internal economics from the outside. It is to show how I would
+              organize the driver logic before building a segment model, scorecard, or operating review.
+            </p>
           </div>
 
           <aside class="context-box" aria-label="Public context used">
@@ -323,7 +370,10 @@
 
       <section>
         <h2 class="section-title">The operating path I would test</h2>
-        <p class="section-intro">The operating path below follows how activity would need to move through the business before it becomes durable economic value.</p>
+
+        <p class="section-intro">
+          The operating path below follows how activity would need to move through the business before it becomes durable economic value.
+        </p>
 
         <div class="path" aria-label="Operating path">
           <span>Provider adoption</span><span class="arrow">→</span>
@@ -335,13 +385,26 @@
           <span>Payback</span>
         </div>
 
-        <p class="linked-tests">Activity volume is only the first layer. The model would need to connect three linked tests: whether free provider and patient accounts convert into activated usage; whether Rupa and Journeys turn lab workflow, patient follow-through, and repeat activity into durable revenue; and whether supplements, fulfillment, integrations, and provider support scale with acceptable cost-to-serve.</p>
+        <p class="linked-tests">
+          Activity volume is only the first layer. The model would need to connect three linked tests: whether free provider
+          and patient accounts convert into activated usage; whether Rupa and Journeys turn lab workflow, patient follow-through,
+          and repeat activity into durable revenue; and whether supplements, fulfillment, integrations, and provider support
+          scale with acceptable cost-to-serve.
+        </p>
 
         <div class="cards">
           <div class="driver-card">
             <div class="number">1</div>
+
             <h3>Adoption is not the same as value</h3>
-            <p>Provider and patient accounts can expand reach, but reach only matters financially if it creates downstream activity. For a segment model, the key distinction is between access and economic follow-through: whether provider adoption leads to patient action, whether that action creates supplement or lab usage, and whether the usage repeats with margin contribution after fulfillment, lab workflow, and support costs.</p>
+
+            <p>
+              Provider and patient accounts can expand reach, but reach only matters financially if it creates downstream
+              activity. For a segment model, the key distinction is between access and economic follow-through: whether
+              provider adoption leads to patient action, whether that action creates supplement or lab usage, and whether
+              the usage repeats with margin contribution after fulfillment, lab workflow, and support costs.
+            </p>
+
             <div class="look-for">
               <h4>What I would look for</h4>
               <ul>
@@ -356,8 +419,15 @@
 
           <div class="driver-card">
             <div class="number">2</div>
+
             <h3>Revenue quality depends on repeat behavior</h3>
-            <p>A segment can grow through first-time activity, but the planning value is different if that activity repeats. Repeat ordering, adherence, reactivation, and cohort retention would show whether growth is becoming durable or staying closer to one-time volume.</p>
+
+            <p>
+              A segment can grow through first-time activity, but the planning value is different if that activity repeats.
+              Repeat ordering, adherence, reactivation, and cohort retention would show whether growth is becoming durable
+              or staying closer to one-time volume.
+            </p>
+
             <div class="look-for">
               <h4>What I would look for</h4>
               <ul>
@@ -372,8 +442,15 @@
 
           <div class="driver-card">
             <div class="number">3</div>
+
             <h3>Cost-to-serve can change the economics</h3>
-            <p>Not all activity carries the same economics. Supplements, labs, provider support, integrations, and care journeys may each add different fulfillment, workflow, and support requirements. Growth can improve margin in one area while adding operating burden in another.</p>
+
+            <p>
+              Not all activity carries the same economics. Supplements, labs, provider support, integrations, and care
+              journeys may each add different fulfillment, workflow, and support requirements. Growth can improve margin
+              in one area while adding operating burden in another.
+            </p>
+
             <div class="look-for">
               <h4>What I would look for</h4>
               <ul>
@@ -390,12 +467,19 @@
 
       <section>
         <h2 class="section-title">Relevant operating finance experience</h2>
-        <p class="section-intro">This reflects finance work I have done before: learning the business model, identifying the drivers that actually move performance, and turning those drivers into a model, scorecard, and decision cadence.</p>
+
+        <p class="section-intro">
+          This reflects finance work I have done before: learning the business model, identifying the drivers that actually
+          move performance, and turning those drivers into a model, scorecard, and decision cadence.
+        </p>
 
         <div class="linked-tests">
-          At SMS, those drivers included pricing, capacity, utilization, billing discipline, account profitability, headcount timing, margin, and cash. For Fullscript, the relevant drivers appear to sit around provider adoption, patient activity, supplement and lab usage, repeat behavior, revenue quality, cost behavior, and segment payback.
+          At SMS, those drivers included pricing, capacity, utilization, billing discipline, account profitability, headcount
+          timing, margin, and cash. For Fullscript, the relevant drivers appear to sit around provider adoption, patient
+          activity, supplement and lab usage, repeat behavior, revenue quality, cost behavior, and segment payback.
           <br><br>
-          While the business models are different, the finance discipline carries over: separate activity from economic value, test revenue quality, understand cost behavior, and support investment decisions with a clear operating model.
+          While the business models are different, the finance discipline carries over: separate activity from economic value,
+          test revenue quality, understand cost behavior, and support investment decisions with a clear operating model.
         </div>
       </section>
 
@@ -403,18 +487,37 @@
         <div class="footer-grid">
           <div class="foot-box">
             <h3>Limitations</h3>
-            <p>This brief uses public information only. It does not estimate Fullscript’s internal segment economics or claim access to provider activity, patient conversion, cohort retention, gross margin, cost-to-serve, acquisition cost, or product-level profitability.</p>
-            <p>The analysis is focused on structure rather than precision: which drivers should be visible, what the model would need to test, and where internal data would be required before planning or investment decisions are made.</p>
+
+            <p>
+              This brief uses public information only. It does not estimate Fullscript’s internal segment economics or claim
+              access to provider activity, patient conversion, cohort retention, gross margin, cost-to-serve, acquisition cost,
+              or product-level profitability.
+            </p>
+
+            <p>
+              The analysis is focused on structure rather than precision: which drivers should be visible, what the model would
+              need to test, and where internal data would be required before planning or investment decisions are made.
+            </p>
           </div>
 
           <div class="foot-box">
             <h3>Authorship</h3>
+
             <p>Prepared by Paramesh Ayyar using public sources.</p>
-            <p>AI tools were used to organize research, test structure, and support drafting. The analysis, judgment, final structure, and wording are candidate-owned.</p>
+
+            <p>
+              AI tools were used to organize research, test structure, and support drafting. The analysis, judgment, final
+              structure, and wording are candidate-owned.
+            </p>
           </div>
         </div>
 
-        <p class="sources">Selected public sources: <a href="https://fullscript.com/en-US/pricing">Fullscript pricing</a>, <a href="https://fullscript.com/blog/fullscript-acquires-rupa-health">Rupa acquisition announcement</a>, <a href="https://fullscript.com/journeys">Fullscript Journeys</a>.</p>
+        <p class="sources">
+          Selected public sources:
+          <a href="https://fullscript.com/en-US/pricing">Fullscript pricing</a>,
+          <a href="https://fullscript.com/blog/fullscript-acquires-rupa-health">Rupa acquisition announcement</a>,
+          <a href="https://fullscript.com/journeys">Fullscript Journeys</a>.
+        </p>
       </section>
     </article>
   </main>
