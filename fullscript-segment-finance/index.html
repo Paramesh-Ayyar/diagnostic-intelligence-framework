@@ -52,7 +52,6 @@
     .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
       margin-bottom: 18px;
       padding: 7px 11px;
       border-radius: 999px;
@@ -181,17 +180,22 @@
     }
 
     .cards {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 18px;
+      display: block;
+      width: 100%;
     }
 
     .driver-card {
-      min-height: 100%;
+      display: block;
+      width: 100%;
       padding: 26px;
+      margin: 0 0 18px;
       border: 1px solid var(--line);
       border-radius: 20px;
       background: #ffffff;
+    }
+
+    .driver-card:last-child {
+      margin-bottom: 0;
     }
 
     .driver-card .number {
@@ -241,13 +245,11 @@
       color: #3d4852;
       font-size: 14.8px;
       line-height: 1.5;
-      columns: 2;
-      column-gap: 34px;
+      columns: 1;
     }
 
     .look-for li {
       margin-bottom: 7px;
-      break-inside: avoid;
     }
 
     .footer-grid {
@@ -298,13 +300,8 @@
       }
 
       .opening-grid,
-      .cards,
       .footer-grid {
         grid-template-columns: 1fr;
-      }
-
-      .look-for ul {
-        columns: 1;
       }
 
       h1 {
