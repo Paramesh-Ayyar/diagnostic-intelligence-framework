@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue Finance Operating Brief | Paramesh Ayyar</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #5d6778;
+      --line: #d9dee8;
+      --soft: #f5f7fb;
+      --card: #ffffff;
+      --accent: #2457c5;
+      --accent-soft: #eaf0ff;
+      --warn: #7a4b00;
+      --warn-soft: #fff5df;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #eef2f8;
+      line-height: 1.45;
+    }
+    .page {
+      max-width: 1040px;
+      margin: 28px auto;
+      padding: 42px 48px;
+      background: var(--card);
+      box-shadow: 0 12px 40px rgba(30, 42, 70, 0.12);
+      border-radius: 18px;
+    }
+    header {
+      border-bottom: 3px solid var(--ink);
+      padding-bottom: 22px;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 34px;
+      line-height: 1.08;
+      margin: 0 0 10px 0;
+      letter-spacing: -0.02em;
+    }
+    .subtitle {
+      font-size: 17px;
+      color: var(--muted);
+      margin: 0;
+      max-width: 860px;
+    }
+    .byline {
+      margin-top: 16px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .section { margin: 24px 0; }
+    h2 {
+      font-size: 18px;
+      margin: 0 0 12px 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+      letter-spacing: -0.01em;
+    }
+    h3 {
+      font-size: 15px;
+      margin: 0 0 8px 0;
+      color: var(--ink);
+    }
+    p { margin: 0 0 12px 0; font-size: 14px; }
+    .lead { font-size: 14px; color: var(--ink); max-width: 900px; }
+    .driver-tree {
+      margin: 18px 0;
+      padding: 18px;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 14px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .arrow { color: #9eb9ff; margin: 0 8px; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .card {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      min-height: 126px;
+    }
+    .card h3 { color: var(--accent); margin-bottom: 8px; }
+    .card p { font-size: 14px; margin: 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 14px;
+      font-size: 14px;
+    }
+    th {
+      text-align: left;
+      background: var(--accent-soft);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      padding: 10px;
+      vertical-align: top;
+    }
+    td {
+      border: 1px solid var(--line);
+      padding: 10px;
+      vertical-align: top;
+    }
+    .callout {
+      border-left: 5px solid var(--accent);
+      background: var(--accent-soft);
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 16px 0;
+    }
+    .guardrail {
+      border-left: 5px solid var(--warn);
+      background: var(--warn-soft);
+      padding: 12px 14px;
+      border-radius: 12px;
+      margin: 16px 0;
+    }
+    .sources { font-size: 12.5px; color: var(--muted); }
+    .sources li { margin-bottom: 7px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+    @media (max-width: 800px) {
+      .page { margin: 0; border-radius: 0; padding: 28px 22px; }
+      h1 { font-size: 28px; }
+      .cards { grid-template-columns: 1fr; }
+      .driver-tree { font-size: 13.5px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .page { box-shadow: none; margin: 0; max-width: none; border-radius: 0; }
+      a { color: var(--ink); }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Revenue Finance Operating Brief</h1>
+      <p class="subtitle">Turning Transaction Growth into Revenue Quality</p>
+      <p class="byline">Prepared by Paramesh Ayyar, CA · Strategic Finance / Revenue & Operating Economics</p>
+    </header>
+
+    <section class="section">
+      <p class="lead">This brief was prepared for Affirm’s Strategic Finance Lead, Revenue role. It is not a forecast of Affirm, an investor memo, or a recommendation deck. It shows how I would structure the Revenue Finance read when performance depends on transaction volume, merchant and product mix, pricing terms, funding and credit costs, repeat usage, and unit economics.</p>
+      <p>Transaction growth is not the same as revenue quality. Affirm reports GMV as transaction volume across the platform, but GMV is not the revenue earned by Affirm. The Revenue Finance work is to understand how activity converts into revenue, how revenue converts into transaction economics, and which drivers explain whether growth is durable, economically attractive, and decision-useful.</p>
+      <div class="driver-tree">Transaction volume <span class="arrow">→</span> product / loan mix <span class="arrow">→</span> merchant and program terms <span class="arrow">→</span> revenue source <span class="arrow">→</span> transaction costs, credit, and funding <span class="arrow">→</span> RLTC <span class="arrow">→</span> operating decision</div>
+      <div class="cards">
+        <div class="card"><h3>Revenue quality</h3><p>Activity growth needs a conversion read: which volume creates revenue yield, RLTC, and repeatable economics.</p></div>
+        <div class="card"><h3>Partner economics</h3><p>Merchant, program, product, and offer terms determine how similar transaction volume can monetize differently.</p></div>
+        <div class="card"><h3>Finance visibility</h3><p>Dashboards should separate growth from economic value before variance explanations reach executives.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Public context used</h2>
+      <p>This brief uses public materials only: Affirm’s role posting, public filings, shareholder materials, investor materials, and merchant-facing documentation. The public record is enough to frame the operating questions, but not enough to estimate Affirm’s internal merchant economics, pricing decisions, credit models, partner-level performance, forecast assumptions, SQL tables, or dashboard definitions.</p>
+    </section>
+
+    <section class="section">
+      <h2>The driver tree I would start with</h2>
+      <p>The first finance cut is the path from activity to economics. Each step can change the interpretation of growth.</p>
+      <p>A higher GMV number may reflect more consumers, more transactions per consumer, higher AOV, different merchant mix, more 0% APR volume, more Affirm Card usage, or different product and financing terms. Those are not interchangeable. They can produce different revenue yields, transaction costs, funding needs, credit-risk exposure, and repeat-usage patterns.</p>
+      <div class="callout"><p><strong>Finance implication:</strong> revenue quality needs a separate read from activity growth. The operating question is not only whether volume increased. It is which volume increased, under which terms, through which product, at what cost, and with what repeatability.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>Merchant and program economics</h2>
+      <p>Partner economics are not captured by volume alone. Public materials describe merchant network revenue as being tied to GMV and loan/product mix, with fees varying by merchant arrangement and product terms. Merchant-facing documentation also describes merchant fees as including a merchant discount rate and transaction fee, with exact fees affected by program option, business size, and risk profile.</p>
+      <p>That makes partner economics a finance driver, not just a commercial detail. The same amount of transaction volume can carry different economics depending on the merchant, product structure, financing term, offer type, credit-risk profile, and fee arrangement. A Revenue Finance read should therefore separate partner growth from the economics of that growth.</p>
+      <div class="callout"><p><strong>Finance implication:</strong> the useful read is not only which merchants are growing. It is which merchants, programs, products, and customer cohorts are adding transaction volume that converts into attractive RLTC after pricing, funding, credit, and transaction-cost effects.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>0% APR as a finance measurement problem</h2>
+      <p>0% APR should be measured as a demand-generation and unit-economics question, not treated as automatically good or bad. Public materials show that select merchants can activate 0% APR financing programs, including through merchant portal and Adaptive Checkout workflows. Affirm has also reported merchant-funded 0% APR activity in shareholder materials.</p>
+      <p>The finance question starts after the offer is activated.</p>
+      <table>
+        <thead><tr><th>Cut</th><th>What it tests</th></tr></thead>
+        <tbody>
+          <tr><td>Conversion lift</td><td>Did the offer create incremental demand or shift transactions that would have happened anyway?</td></tr>
+          <tr><td>Merchant funding</td><td>Who funded the economics, and under what program terms?</td></tr>
+          <tr><td>AOV and product mix</td><td>Did the offer change order size, financing term, or revenue yield?</td></tr>
+          <tr><td>Repeat behavior</td><td>Did first-time or promo-driven users come back without the same economics?</td></tr>
+          <tr><td>Credit and funding cost</td><td>Did the offer change risk, duration, funding need, or transaction cost?</td></tr>
+          <tr><td>RLTC impact</td><td>Did the activity convert into attractive transaction economics after costs?</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>RLTC and transaction economics</h2>
+      <p>RLTC is the next read after revenue because it connects growth to transaction-level cost. Public investor materials define transaction costs as including loss on loan purchase commitment, provision for credit losses, funding costs, and processing and servicing expense. Revenue Less Transaction Costs, or RLTC, is presented as GAAP total revenue less those transaction costs, and RLTC as a percentage of GMV is used as a unit-economics measure for transactions processed on the platform.</p>
+      <p>That makes RLTC the bridge between topline activity and transaction economics. It does not replace GAAP revenue, operating income, cash, or full profitability. It does create a more useful operating read than revenue alone because it forces the analysis to connect growth with the costs that move with transaction volume.</p>
+      <div class="driver-tree">GMV growth <span class="arrow">→</span> revenue yield <span class="arrow">→</span> transaction costs <span class="arrow">→</span> RLTC dollars <span class="arrow">→</span> RLTC as % of GMV <span class="arrow">→</span> operating decision</div>
+      <p>That sequence matters because two merchants, programs, or product mixes can add the same GMV but produce different transaction economics. The difference may come from merchant terms, offer type, consumer credit profile, financing duration, funding cost, processing and servicing costs, or repeat behavior. A Revenue Finance Lead needs to help the business see those differences before the variance explanation reaches executives.</p>
+    </section>
+
+    <section class="section">
+      <h2>Data cuts I would validate</h2>
+      <p>The dashboard should not start as a visualization exercise. It should start as a metric-definition exercise. The role calls for models to forecast, reconcile, and explain metric variances; top-line performance metrics and targets; scalable automated dashboards; and comfort with SQL, Looker and/or other visualization tools.</p>
+      <table>
+        <thead><tr><th>Cut</th><th>Finance question it answers</th></tr></thead>
+        <tbody>
+          <tr><td>Merchant / partner</td><td>Which partners are adding volume, revenue, and RLTC, and are those moving together or diverging?</td></tr>
+          <tr><td>Product / loan type</td><td>Is growth coming from products with different revenue yield, duration, risk, or cost behavior?</td></tr>
+          <tr><td>Offer type</td><td>Are 0% APR, promotional, standard APR, card, or other programs producing different economics?</td></tr>
+          <tr><td>AOV / transaction size</td><td>Is GMV growth coming from more transactions, larger orders, or mix shift?</td></tr>
+          <tr><td>New vs repeat consumer</td><td>Is growth driven by acquisition, retention, or deeper repeat usage?</td></tr>
+          <tr><td>Cohort</td><td>Do newer consumer or merchant cohorts retain and monetize differently over time?</td></tr>
+          <tr><td>Credit / risk band</td><td>Are revenue gains being offset by credit losses, provision pressure, or risk mix?</td></tr>
+          <tr><td>Funding channel / cost</td><td>Does growth require more expensive or constrained funding capacity?</td></tr>
+          <tr><td>Processing / servicing cost</td><td>Are transaction-level costs scaling cleanly with volume?</td></tr>
+          <tr><td>RLTC bridge</td><td>Which driver explains the movement from GMV to revenue to RLTC?</td></tr>
+        </tbody>
+      </table>
+      <div class="callout"><p><strong>First validation step:</strong> reconcile the executive metric chain from source data before building the dashboard: GMV, revenue, transaction costs, RLTC dollars, and RLTC as a percentage of GMV, segmented by merchant, product, offer type, cohort, and risk profile.</p></div>
+      <p>That validation matters because the dashboard is only useful if the metric definitions tie back to the same source tables used for forecasting, variance analysis, and executive reporting. I would not position this as data engineering ownership. I would position it as finance-led source-data validation: using SQL and reconciliation logic to make sure the forecast, dashboard, and executive narrative are built on the right definitions.</p>
+    </section>
+
+    <section class="section">
+      <h2>Relevant operating-finance work I have done before</h2>
+      <p>This is the same finance discipline I have applied before, even though the business model was different.</p>
+      <p>At SMS, the work was not just producing a forecast. The finance problem was to understand how operating activity converted into margin, cash, and account-level profitability. I rebuilt the planning and operating cadence around the drivers that actually moved performance: pricing, capacity, utilization, hiring timing, billing discipline, collections, gross margin, and account profitability.</p>
+      <p>That work required messy operating data to be turned into a model, a scorecard, and a decision routine. The model connected commercial activity to financial outcomes. The scorecard showed where performance was moving. The operating cadence gave leadership a consistent way to act on pricing, capacity, margin, and cash.</p>
+      <div class="callout"><p><strong>Transferable pattern:</strong> separate activity from economic value, identify the drivers that explain the conversion, validate the metric definitions, and give leaders a decision-ready view of performance.</p></div>
+    </section>
+
+    <section class="section">
+      <h2>Limitations and authorship</h2>
+      <div class="guardrail">
+        <p>This brief uses only public information. It does not claim access to Affirm’s internal merchant terms, pricing decisions, credit models, funding assumptions, partner-level performance, SQL tables, forecast logic, or dashboard definitions.</p>
+        <p>The purpose is not to estimate Affirm’s economics from the outside. The purpose is to show how I would structure the Revenue Finance read: what I would separate, what I would validate, and how I would connect transaction growth, revenue quality, unit economics, and operating decisions.</p>
+      </div>
+      <p>This work sample was prepared by Paramesh Ayyar with AI assistance for drafting, structure, and editing. The finance logic, source selection, judgment, and final wording were reviewed and owned by me.</p>
+    </section>
+
+    <section class="section">
+      <h2>Public sources referenced</h2>
+      <ul class="sources">
+        <li><a href="https://job-boards.greenhouse.io/affirm/jobs/7717901003" target="_blank" rel="noopener">Affirm Strategic Finance Lead, Revenue role posting</a></li>
+        <li><a href="https://www.sec.gov/Archives/edgar/data/1820953/000182095325000080/afrm-20250630.htm" target="_blank" rel="noopener">Affirm FY2025 Form 10-K</a></li>
+        <li><a href="https://investors.affirm.com/static-files/b92abc34-edbf-418c-a5bd-295ecd213fb3" target="_blank" rel="noopener">Affirm FQ2 2026 Shareholder Letter</a></li>
+        <li><a href="https://businesshub.affirm.com/hc/en-us/articles/5995432933652-Getting-started-with-Affirm-Frequently-asked-questions-before-starting" target="_blank" rel="noopener">Affirm merchant FAQ: programs and merchant fees</a></li>
+        <li><a href="https://businesshub.affirm.com/hc/en-us/articles/4418104503060-0-APR-Financing" target="_blank" rel="noopener">Affirm merchant documentation: 0% APR financing</a></li>
+      </ul>
+    </section>
+
+    <footer>Paramesh Ayyar, CA · Toronto, ON · Strategic Finance / Revenue & Operating Economics</footer>
+  </main>
+</body>
+</html>
