@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revenue FP&A for Field-Service SaaS</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #d8dee9;
+      --card: #ffffff;
+      --accent: #1f4f82;
+      --accent-soft: #e8f1fb;
+      --warn: #7a4b00;
+      --warn-bg: #fff6df;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 44px 28px 56px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 34px 36px;
+      box-shadow: 0 12px 32px rgba(17, 24, 39, 0.06);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 34px;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+    }
+
+    .subtitle {
+      margin: 12px 0 0;
+      max-width: 880px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .basis {
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      border-radius: 12px;
+      color: #19324d;
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 26px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px 30px;
+      box-shadow: 0 8px 24px rgba(17, 24, 39, 0.04);
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    p { margin: 0 0 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    .lead {
+      font-size: 17px;
+      color: #1f2937;
+      max-width: 930px;
+    }
+
+    .keyline {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 14px;
+      background: #f3f6fa;
+      border: 1px solid var(--line);
+      font-weight: 700;
+      color: #172033;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .driver-card {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 18px;
+      background: #fff;
+    }
+
+    .driver-card h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+      letter-spacing: -0.01em;
+      color: var(--accent);
+    }
+
+    .driver-card p {
+      color: #374151;
+      font-size: 14.5px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 14.5px;
+    }
+
+    th, td {
+      text-align: left;
+      vertical-align: top;
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      color: #111827;
+      background: #f3f6fa;
+      font-weight: 700;
+    }
+
+    tr:last-child td { border-bottom: 0; }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .note {
+      padding: 18px;
+      border-radius: 16px;
+      background: var(--warn-bg);
+      border: 1px solid #f1d18a;
+      color: var(--warn);
+      font-size: 14.5px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 820px) {
+      .grid, .two-col { grid-template-columns: 1fr; }
+      .hero, .section { padding: 24px; }
+      h1 { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Revenue FP&amp;A Brief</p>
+      <h1>Revenue FP&amp;A for Field-Service SaaS</h1>
+      <p class="subtitle">Customer accounts, technician commitments, onboarding timing, and workflow adoption as the operating bridge behind forecastable revenue quality.</p>
+      <div class="basis">
+        <strong>Basis and limits:</strong> This brief uses hands-on customer-side ServiceTitan operating experience and public pricing language. Exact internal packaging, pricing, and country-specific terms may vary.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Revenue read</h2>
+      <p class="lead">Revenue movement in field-service SaaS is best read through the relationship between the customer account, the contracted technician base, onboarding timing, and the operating workflows that support expansion or pressure.</p>
+      <p class="lead">Active technician licenses are the most observable recurring billing driver in the ServiceTitan-style model, but they should not replace customer-account analysis. Customer accounts show acquisition, retention, and churn. Technician commitments show billable scale. Active usage and workflow depth explain the pressure behind expansion, contraction, renewal quality, and future revenue movement.</p>
+      <div class="keyline">A useful forecast separates the drivers that bill directly from the signals that explain why those drivers expand, contract, or become more durable.</div>
+    </section>
+
+    <section class="section">
+      <h2>Revenue driver architecture</h2>
+      <div class="grid">
+        <div class="driver-card">
+          <h3>1. Contracted revenue base</h3>
+          <p>Customer growth and billable scale need separate reads. Customer accounts show whether revenue is coming from new customers, retained customers, or customers that left. Committed technician counts show the contracted recurring revenue base. Active technician trends show whether retained customers are expanding, underusing, or creating renewal or downsell pressure.</p>
+        </div>
+        <div class="driver-card">
+          <h3>2. Revenue start and activation timing</h3>
+          <p>Sold revenue becomes recurring revenue only when onboarding, commitment start, billing start, and technician activation are aligned. This separates demand strength from revenue-start timing and shows whether variance is coming from sales activity, implementation timing, or activation pace.</p>
+        </div>
+        <div class="driver-card">
+          <h3>3. Account growth and embeddedness</h3>
+          <p>Customer operating scale and workflow depth show the strength of the account behind the revenue bridge. Technician headcount, locations, job volume, invoice volume, dispatch activity, GTV, office users, reporting, payments, memberships, and accounting integration show whether the contractor is larger, more active, and more embedded in ServiceTitan.</p>
+        </div>
+        <div class="driver-card">
+          <h3>4. Monetization and revenue durability</h3>
+          <p>Operating growth becomes billable growth when it converts into added technician commitments, paid products, package changes, payments usage, paid implementation scope, or price. The durability read separates repeatable growth from growth that depends on timing, price, mix, or one-time expansion events.</p>
+        </div>
+        <div class="driver-card">
+          <h3>5. Forecast narrative and controls</h3>
+          <p>The forecast narrative should explain what changed, why it changed, whether it is durable, and which action belongs with the variance. A miss from onboarding delay is different from a miss caused by customer reductions or weaker renewal outcomes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Forecast checks</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Forecast check</th>
+            <th>Revenue implication</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Are customer accounts and committed technician counts moving together?</td>
+            <td>Shows whether revenue movement is coming from customer growth, retained-customer expansion, customer reductions, churn, or changes in committed technician volume.</td>
+          </tr>
+          <tr>
+            <td>Are sold customers entering the billing base on plan?</td>
+            <td>Separates sales demand from onboarding timing, commitment start, billing start, and technician activation.</td>
+          </tr>
+          <tr>
+            <td>Is the account becoming larger and more embedded?</td>
+            <td>Combines operating scale and workflow depth: locations, job volume, invoice volume, GTV, dispatch activity, office users, reporting, payments, memberships, and accounting integration.</td>
+          </tr>
+          <tr>
+            <td>Which account changes actually convert to revenue?</td>
+            <td>Distinguishes added technicians, paid products, package changes, pricing, payments usage, paid implementation scope, renewal outcomes, and temporary timing or mix benefits.</td>
+          </tr>
+          <tr>
+            <td>Does the variance point to an operating action or a forecast-control issue?</td>
+            <td>Connects the variance to the right response across sales, onboarding, customer success, pricing, product adoption, geography/currency exposure, source-data alignment, or forecast methodology.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Operating lens</h2>
+      <div class="two-col">
+        <div>
+          <p>The operating lens comes from working inside the contractor workflows ServiceTitan monetizes: dispatch, scheduling, estimates, invoicing, payments, reporting, accounting integration, memberships, customer records, technician activity, and operational reporting.</p>
+          <p>The revenue variance does not begin in the P&amp;L. It begins inside the customer account: technician commitments, activation timing, account growth, workflow dependency, paid product adoption, renewal pressure, and billing mechanics.</p>
+        </div>
+        <div class="note">
+          <strong>Finance value:</strong> making customer-account drivers visible before they become reported revenue variance, then translating the variance into the right operating response across sales, onboarding, customer success, pricing, product adoption, or forecast methodology.
+        </div>
+      </div>
+      <p class="footer">Prepared as a role-specific operating finance brief. Public read only; not an assertion of ServiceTitan internal performance or current packaging.</p>
+    </section>
+  </main>
+</body>
+</html>
